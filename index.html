@@ -3,8 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>UVE Reference Player</title>
-    <link type="text/css" rel="stylesheet" href="/dist/bundle.4dc6750b5cf3a14e.css" />
-    <script type="text/javascript" src="/dist/bundle.809889c46f39d2dd.js"></script>
+    <script>
+      const version = new Date().valueOf();
+      const link = document.createElement("link");
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.href = "/dist/bundle.css?ver=" + version;
+      document.head.appendChild(link);
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "/dist/bundle.js?ver=" + version;
+      document.head.appendChild(script);
+    </script>
   </head>
 
   <body>

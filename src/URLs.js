@@ -41,12 +41,12 @@ var amsamplesDrmConfig = {
 var urls = [
   {
     name: "Big Buck Bunny (DASH, Clear)",
-    url: "http://media.developer.dolby.com/Atmos/MP4/shattered-3Mb.mp4",
+    url: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
     drmConfig: null,
   },
   {
     name: "DOLBY DIGITAL PLUS 7.1 – H.264",
-    url: "http://media.developer.dolby.com/DDP/MP4_HPL40_30fps_channel_id_71.mp4",
+    url: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
     drmConfig: null,
   },
   /*{

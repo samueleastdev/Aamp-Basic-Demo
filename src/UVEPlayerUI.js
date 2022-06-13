@@ -142,6 +142,7 @@ function toggleOverlay() {
 }
 
 function loadNextAsset() {
+  console.log("loadNextAsset-------------------");
   resetPlayer();
   resetUIOnNewAsset();
   urlIndex++;

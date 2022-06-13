@@ -229,6 +229,7 @@ function resetPlayer() {
 }
 
 function loadUrl(urlObject) {
+  console.log("loadUrl");
   var initConfiguration = defaultInitConfig;
   initConfiguration.drmConfig = urlObject.drmConfig;
   playerObj.initConfig(initConfiguration);
