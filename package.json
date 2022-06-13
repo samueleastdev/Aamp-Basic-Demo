@@ -1,0 +1,22 @@
+{
+  "name": "aamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "~0.4.*",
+    "grunt-cache-bust": "^1.7.0",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
