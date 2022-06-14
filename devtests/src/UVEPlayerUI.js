@@ -98,34 +98,6 @@ function fastfwd() {
   }
 }
 
-//  load video file from select field
-function getVideo() {
-  var fileURLContent = document.getElementById("videoURLs").value; // get select field
-  if (fileURLContent != "") {
-    var newFileURLContent = fileURLContent;
-    document.getElementById("contentURL").innerHTML = "URL: " + fileURLContent;
-    //get the selected index of the URL List
-    var selectedURL = document.getElementById("videoURLs");
-    var optionIndex = selectedURL.selectedIndex;
-    //set the index to the selected field
-    document.getElementById("videoURLs").selectedIndex = optionIndex;
-
-    console.log(newFileURLContent);
-    resetPlayer();
-    resetUIOnNewAsset();
-
-    for (urlIndex = 0; urlIndex < urls.length; urlIndex++) {
-      if (newFileURLContent === urls[urlIndex].url) {
-        console.log("FOUND at index: " + urlIndex);
-        loadUrl(urls[urlIndex]);
-        break;
-      }
-    }
-  } else {
-    errMessage("Enter a valid video URL"); // fail silently
-  }
-}
-
 //function to toggle Overlay widget
 function toggleOverlay() {
   var overlay = document.getElementById("overlayModal");
@@ -143,7 +115,7 @@ function toggleOverlay() {
 
 function loadNextAsset() {
   console.log("loadNextAsset-------------------");
-  resetPlayer();
+  createPlayer();
   resetUIOnNewAsset();
   urlIndex++;
   if (urlIndex >= urls.length) {
@@ -153,7 +125,7 @@ function loadNextAsset() {
 }
 
 function loadPrevAsset() {
-  resetPlayer();
+  createPlayer();
   resetUIOnNewAsset();
   urlIndex--;
   if (urlIndex < 0) {
@@ -374,13 +346,7 @@ var HTML5PlayerControls = function () {
         toggleCC();
         break;
       case 7:
-        console.log("MADE IT HERE");
-        if (this.dropDownListVisible == false) {
-          this.showDropDown();
-        } else {
-          this.hideDropDown();
-          // getVideo();
-        }
+        console.log("Dropdown");
         break;
       case 8:
         toggleOverlay();

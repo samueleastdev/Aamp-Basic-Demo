@@ -10,8 +10,6 @@ Object.freeze(playerStatesEnum);
 class AAMPPlayer {
   constructor() {
     this.player = new AAMPMediaPlayer();
-    console.log("this.player", this.player);
-    this.url = "";
   }
 
   destroy() {
@@ -26,9 +24,9 @@ class AAMPPlayer {
   /**
    * URI of the Media being played by the Video Engine
    */
-  load(url) {
-    this.url = url;
-    this.player.load(url);
+  load(url, autoplay) {
+    console.log("LOADING", url, autoplay);
+    this.player.load(url, autoplay);
   }
 
   /**
@@ -50,6 +48,10 @@ class AAMPPlayer {
    */
   pause() {
     this.player.pause();
+  }
+
+  detach() {
+    this.player.detach();
   }
 
   /**

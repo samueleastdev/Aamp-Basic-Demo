@@ -18,77 +18,8 @@
   </head>
 
   <body>
-    <div id="videoContainer" class="container">
-      <!-- Video -->
-      <video style="width: 100%; height: 100%">
-        <source src="placeholder.mp4" type="video/ave" />
-      </video>
-      <div id="controlDiv">
-        <!-- Video Controls -->
-        <div id="videoControlsDiv">
-          <button class="button" id="playOrPauseButton">
-            <img id="playOrPauseIcon" src="./icons/play.png" />
-          </button>
-          <button class="button" id="rewindButton">
-            <img class="flipImg" src="./icons/fastForward.png" />
-          </button>
-          <button class="button" id="skipBackwardButton">
-            <img class="flipImg" src="./icons/skipForward.png" />
-          </button>
-          <nobr id="currentDuration">00:00:00</nobr>
-          <div id="seekBarOuter">
-            <div id="seekBar"></div>
-          </div>
-          <nobr id="totalDuration">00:00:00</nobr>
-          <button class="button" id="skipForwardButton">
-            <img src="./icons/skipForward.png" />
-          </button>
-          <button class="button" id="fastForwardButton">
-            <img src="./icons/fastForward.png" />
-          </button>
-          <button class="button" id="muteVideoButton">
-            <img id="muteIcon" src="./icons/unMute.png" />
-          </button>
-          <button class="button" id="ccButton">
-            <img id="ccIcon" src="./icons/closedCaptioningDisabled.png" />
-          </button>
-        </div>
-      </div>
-      <div id="controlDivNext">
-        <div id="videoControlsDivNext">
-          <select id="videoURLs"></select>
-          <p id="playerType">UVE PLAYER</p>
-          <span id="logState">Diagnostics: </span>
-          <label id="autoLogButton">
-            <input type="checkbox" id="logCheck" />
-          </label>
-          <label>
-            <button class="round-button" id="homeButton">
-              <img id="homeIcon" src="./icons/home.png" />
-            </button>
-          </label>
-        </div>
-      </div>
-    </div>
-
-    <!-- The Overlay Modal -->
-    <div id="overlayModal" class="overModal">
-      <h4>
-        AAMP<nobr id="contentType"></nobr><nobr id="manifestType"></nobr
-        ><nobr id="drmType"></nobr>
-      </h4>
-      Bitrates(Mbps): <nobr id="availableBitratesList"></nobr>
-    </div>
-
-    <!-- The URL Modal -->
-    <div id="urlModal" class="urlModal">
-      <p id="contentURL"></p>
-    </div>
-
-    <!-- The Fast Forward Modal -->
-    <div id="ffModal" class="circle">
-      <img id="ffIMG" src="./icons/fastForward.png" />
-    </div>
-    <p id="ffSpeed"></p>
+    <video style="width: 100%; height: 100%">
+      <source src="placeholder.mp4" type="video/ave" />
+    </video>
   </body>
 </html>
